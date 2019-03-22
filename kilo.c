@@ -1,3 +1,5 @@
+// The stdlib.h header defines four variable types, several macros, and various functions for performing general functions.
+#include <stdlib.h>
 // The <termios.h> header contains the definitions used by the terminal I/O interfaces
 #include <termios.h>
 // unistd.h is the name of the header file that provides access to the POSIX operating system API
