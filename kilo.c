@@ -5,6 +5,12 @@
 // unistd.h is the name of the header file that provides access to the POSIX operating system API
 #include <unistd.h>
 
+struct termios orig_termios;
+
+
+void disableRawMode() {
+  tcsetattr(STDIN_FILENO, TCSAFLUSH, &orig_termios);
+}
 
 // turn off "echo" mode, (The ECHO feature causes each key you type to be printed to the terminal, so you can see what you’re typing, and by this function below it disabled)
 void enableRawMode(){
